@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+	</title>
+
+
+
+	<!-- Insert to your webpage before the </head> -->
+	<script src="sliderengine/jquery.js"></script>
+	<script src="sliderengine/amazingslider.js"></script>
+	<link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+	<script src="sliderengine/initslider-1.js"></script>
+	<!-- End of head section HTML codes -->
+
+
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			background-color: #EEEEEE;
+		}
+
+		#banner {
+			margin-left: auto;
+			margin-right: auto;
+			background-color: pink;
+			border: 3px;
+			width: 1200px;
+			height: 200px;
+			position: sticky;
+		}
+
+		#menu {
+			margin-left: auto;
+			margin-right: auto;
+			border: 3px;
+			width: 1200px;
+			height: 20px;
+		}
+
+		#menu ul {
+			list-style-type: none;
+			margin-left: 300px;
+		}
+
+		#menu ul li {
+			float: left;
+			margin-left: 15px;
+		}
+
+		#menu ul li a {
+			padding: 8px;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: bold;
+			color: #9E7676;
+			background-color: #D8C9C9;
+			border-radius: 10px 10px 10px 10px;
+			background: linear-gradient(90deg, #D8C9C9, #D8A9A9, #E5B7B7);
+		}
+
+		#menu ul li a:hover {
+			padding: 8px;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: bold;
+			background: linear-gradient(50deg, #EFE3E3, #EFE3E3);
+		}
+
+		#slider {
+			margin-left: auto;
+			margin-right: auto;
+			background-color: red;
+			border: 3px;
+			width: 1200px;
+			height: 400px;
+		}
+
+		#media {
+			margin-left: auto;
+			margin-right: auto;
+			color: black;
+			font-size: 40px;
+			font-family: 'Merriweather', serif;
+		}
+
+		#control {
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #FFFFFF;
+			width: 1200px;
+			height: 850px;
+		}
+
+		#video {
+			background-color: #FFFFFF;
+			border: 0.5px solid #FFEEEE;
+			height: 400px;
+			width: 280px;
+			position: absolute;
+		}
+
+		#video1 {
+			margin-left: 320px;
+			background-color: #FFFFFF;
+			border: 0.5px solid #FFEEEE;
+			height: 400px;
+			width: 280px;
+			position: absolute;
+		}
+
+		#video2 {
+			margin-left: 640px;
+			background-color: #FFFFFF;
+			border: 0.5px solid #FFEEEE;
+			height: 400px;
+			width: 280px;
+			position: absolute;
+		}
+
+		#video3 {
+			margin-top: 420px;
+			background-color: #FFFFFF;
+			border: 0.5px solid #FFEEEE;
+			height: 400px;
+			width: 280px;
+			position: absolute;
+		}
+
+		#video4 {
+			margin-top: 420px;
+			margin-left: 320px;
+			background-color: #FFFFFF;
+			border: 0.5px solid #FFEEEE;
+			height: 400px;
+			width: 280px;
+			position: absolute;
+		}
+
+		#video5 {
+			margin-top: 420px;
+			margin-left: 640px;
+			background-color: #FFFFFF;
+			border: 0.5px solid #FFEEEE;
+			height: 400px;
+			width: 280px;
+			position: absolute;
+		}
+
+		#load {
+			margin-top: 779px;
+			left: 1100px;
+			position: absolute;
+			width: 120px;
+			height: 30px;
+			font-size:
+		}
+
+		#load a {
+			padding: 5px;
+			text-decoration: none;
+			background-color: #EEEEEE;
+			color: red;
+			font-size: 18px;
+		}
+
+		#load a:hover {
+			padding: 5px;
+			text-decoration: underline;
+			background-color: #EEEEEE;
+			color: red;
+			font-size: 18px;
+		}
+
+		#id1 {
+			position: relative;
+			color: black;
+			font-size: 40px;
+			font-family: 'Roboto Slab', serif;
+			margin-left: auto;
+			margin-right: auto;
+			border: 3px;
+			width: 1200px;
+			height: 200px;
+		}
+
+		#our {
+			color: black;
+			font-size: 40px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 3px;
+			background-color: #FFFFFF;
+			height: 300px;
+			font-family: 'Roboto Slab', serif;
+		}
+
+		#facebook {
+			display: block;
+			margin-left: 700px;
+			margin-top: 10px;
+		}
+
+		#facebook a {
+			display: block;
+			width: 150px;
+			height: 140px;
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			opacity: 0.50
+		}
+
+		#facebook a:hover {
+			display: block;
+			width: 150px;
+			height: 140px;
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			opacity: 1.30
+		}
+
+		#twitter {
+			display: block;
+			margin-left: 500px;
+			margin-top: -140px;
+		}
+
+		#twitter a {
+			display: block;
+			width: 150px;
+			height: 140px;
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			opacity: 0.50
+		}
+
+		#twitter a:hover {
+			display: block;
+			width: 150px;
+			height: 140px;
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			opacity: 1.30
+		}
+
+		#insta {
+			display: block;
+			margin-left: 300px;
+			margin-top: -140px;
+		}
+
+		#insta a {
+			display: block;
+			width: 150px;
+			height: 140px;
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			opacity: 0.50
+		}
+
+		#insta a:hover {
+			display: block;
+			width: 150px;
+			height: 140px;
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			opacity: 1.30
+		}
+
+		#coke {
+			margin-left: 250px;
+			margin-top: 120px;
+			opacity: 0.50;
+			position: absolute;
+		}
+
+		#coke:hover {
+			opacity: 1.30;
+		}
+
+		#cokediet {
+			margin-left: 500px;
+			margin-top: 120px;
+			position: absolute;
+			opacity: 0.50
+		}
+
+		#cokediet:hover {
+			opacity: 1.30;
+		}
+
+		#fanta {
+			margin-left: 750px;
+			margin-top: 120px;
+			position: absolute;
+			opacity: 0.50
+		}
+
+		#fanta:hover {
+			opacity: 1.30;
+		}
+
+		#sprite {
+			margin-left: 1000px;
+			margin-top: 120px;
+			position: absolute;
+			opacity: 0.50
+		}
+
+		#sprite:hover {
+			opacity: 1.30;
+		}
+
+		#menu2 {
+			margin-left: auto;
+			margin-right: auto;
+			border: 3px;
+			width: 1200px;
+			height: 20px;
+		}
+
+		#menu2 ul {
+			list-style-type: none;
+			margin-left: -120px;
+		}
+
+		#menu2 ul li {
+			float: left;
+			margin-left: 200px;
+			padding: 3px;
+		}
+
+		#menu2 ul li a {
+			padding: 3px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			color: #F50000;
+		}
+
+		#menu2 ul li a:hover {
+			padding: 3px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			color: #111111;
+		}
+
+		#footer {
+			background-color: #FFFFFF;
+			margin-top: 30px;
+			font-size: 16px;
+			height: 100px;
+		}
+
+		#footer a {
+			color: red;
+			font-size: 18px;
+			text-decoration: none;
+		}
+
+		#coca {
+			color: red;
+			margin-left: 40px;
+			margin-top: -40px;
+		}
+
+		#coca a {
+			color: red;
+			text-decoration: none;
+		}
+
+		#fb {
+			margin-left: 240px;
+			margin-top: -20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="banner"><img src="c.png" width="1200px;" height="200px;"></div>
+	<div id="menu">
+		<ul>
+			<li><a href="#1">PRODUCTS</a></li>
+			<li><a href="#1">HISTORY</a></li>
+			<li><a href="#1">VIDEOS</a></li>
+			<li><a href="#1">RECEPIES</a></li>
+
+		</ul>
+	</div><br>
+	<div id="slider">
+
+
+
+
+		<!-- Insert to your webpage where you want to display the slider -->
+		<div class="amazingslider-wrapper" id="amazingslider-wrapper-1"
+			style="display:block;position:relative;max-width:1200px;margin:0px auto 56px;">
+			<div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+				<ul class="amazingslider-slides" style="display:none;">
+					<li><img src="images/Untitled-3.png" />
+					</li>
+					<li><img src="images/Untitled-1.png" />
+					</li>
+					<li><img src="images/Untitled-1%20copy.png" />
+					</li>
+					<li><img src="images/Untitled-5.png" />
+					</li>
+					<li><img src="images/Untitled-6.png" />
+					</li>
+				</ul>
+				<ul class="amazingslider-thumbnails" style="display:none;">
+					<li><img src="images/Untitled-3-tn.png" /></li>
+					<li><img src="images/Untitled-1-tn.png" /></li>
+					<li><img src="images/Untitled-1%20copy-tn.png" /></li>
+					<li><img src="images/Untitled-5-tn.png" /></li>
+					<li><img src="images/Untitled-6-tn.png" /></li>
+				</ul>
+			</div>
+		</div>
+		<!-- End of body section HTML codes -->
+
+
+
+
+
+
+	</div><br><br>
+	<div id="media">
+		<center>MEDIA STREAM</center>
+	</div><br><br>
+
+	<div id="control">
+		<div style="margin-left:140px;">
+
+			<div id="video"><video src="cokead.mp4" controls width="280px" height="350px" poster="ad.png"
+					style="margin-top: -70px;"></video><a href="#3"><img src="coke2.png" width="50" height="40">
+					<div id="coca"><a href="#3">coca-cola</a></b></div>
+				</a>
+				<div id="fb"><a href="#3"><img src="facebook.jpg" width="30" height="30"></a></div>
+				<p>Main irada, Main himat hoon, takat hoon - Main Aurat hoon!<br><b><a href="#3"
+							style="text-decoration: none;color: red">#InternationalWomensDay</a></b>
+			</div>
+
+
+			<div id="video1"><video src="cokead2.mp4" controls width="280" height="350" poster="ad2.png"
+					style="margin-top: -70px;"></video><a href="#3"><img src="coke2.png" width="50" height="40">
+					<div id="coca"><a href="#3">coca-cola</a></b></div>
+				</a>
+				<div id="fb"><a href="#3"><img src="facebook.jpg" width="30" height="30"></a></div>
+				<p>Love me some spaghetti, roast chicken and Coca-Cola! What does your meal table look like?<br><b><a
+							href="#3" style="text-decoration: none;color: red">#TastesBetterWithCocaCola</a></b>
+			</div>
+
+			<div id="video2"><video src="cokead3.mp4" controls width="280px" height="390px" poster="ad3.png"
+					style="margin-top: -115px;"></video><a href="#3"><img src="coke2.png" width="50" height="40">
+					<div id="coca"><a href="#3">coca-cola</a></b></div>
+				</a>
+				<div id="fb"><a href="#3"><img src="facebook.jpg" width="30" height="30"></a></div>
+				<center>
+					<p style="line-height: 15px;">What day is it?1. Leap Day2. World Samosa Day
+						Take your pick and comment below.</p>
+				</center><b><a href="#3" style="text-decoration: none;color: red">#TastesBetterWithCocaCola</a></b>
+			</div>
+
+
+			<div id="video3"><video src="cokead4.mp4" controls width="280" height="350" poster="ad4.png"
+					style="margin-top: -70px;"></video><a href="#3"><img src="coke2.png" width="50" height="40">
+					<div id="coca"><a href="#3">coca-cola</a></b></div>
+				</a>
+				<div id="fb"><a href="#3"><img src="facebook.jpg" width="30" height="30"></a></div>
+				<p>Main irada, Main himat hoon, takat hoon - Main Aurat hoon!<br><b><a href="#3"
+							style="text-decoration: none;color: red">#InternationalWomensDay <a href="33"
+								style="text-decoration: none;color: red">#CocaColaKhulayToDilKhulay</a></a></b>
+			</div>
+
+			<div id="video4"><video src="cokead6.mp4" controls width="280" height="390" poster="ad5.png"
+					style="margin-top: -115px;"></video><a href="#3"><img src="coke2.png" width="50" height="40">
+					<div id="coca"><a href="#3">coca-cola</a></b></div>
+				</a>
+				<div id="fb"><a href="#3"><img src="facebook.jpg" width="30" height="30"></a></div>
+				<p>Main irada, Main himat hoon, takat hoon - Main Aurat hoon!<br><b><a href="#3"
+							style="text-decoration: none;color: red">#InternationalWomensDay</a></b>
+			</div>
+
+			<div id="video5"><video src="cokead5.mp4" controls width="280" height="390" poster="cokestdio.png"
+					style="margin-top: -110px;"></video><a href="#3"><img src="coke2.png" width="50" height="40">
+					<div id="coca"><a href="#3">coca-cola</a></b></div>
+				</a>
+				<div id="fb"><a href="#3"><img src="facebook.jpg" width="30" height="30"></a></div>
+				<p>Main irada, Main himat hoon, takat hoon - Main Aurat hoon!<br><b><a href="#3"
+							style="text-decoration: none;color: red">#InternationalWomensDay</a></b>
+			</div>
+
+
+
+			<div id="load"><a href="#3">LOAD MORE</a></div>
+		</div>
+	</div>
+
+
+	<br><br>
+	<div id=id1>
+		<center>SOCIAL MEDIA</center>
+
+		<div id="facebook"><a href="#3">
+				<center><img src="facebook.jpg" width="60" height="70"></center><br> &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp
+				106,455,908<br> &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Likes
+			</a></div>
+
+		<div id="insta"><a href="#3">
+				<center><img src="instagram.png" width="60" height="70"></center><br> &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp
+				106,455,908<br> &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Likes
+			</a></div>
+
+		<div id="twitter"><a href="#3">
+				<center><img src="twitter.jpg" width="60" height="70"></center><br> &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp
+				106,455,908<br> &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Likes
+			</a></div>
+
+
+	</div><br>
+	<div id="our">
+		<center>OUR BRAND<br>FAMILY</center>
+
+		<div id="coke"><a href="#3"><img src="coke.png" width="120" height="70"></a></div>
+		<div id="cokediet"><a href="#3"><img src="coke diet.png" width="120" height="70"></a></div>
+		<div id="fanta"><a href="#3"><img src="fanta.png" width="120" height="70"></a></div>
+		<div id="sprite"><a href="#3"><img src="sprite.png" width="120" height="70"></a></div>
+	</div>
+
+
+
+
+	<div id="pic">
+		<center><img src="coke.png" width="300px" height="180px"></center>
+	</div>
+
+	<div id="menu2">
+		<ul>
+			<li><a href="#1">PRODUCTS</a></li>
+			<li><a href="#1">HISTORY</a></li>
+			<li><a href="#5">VIDEOS</a></li>
+			<li><a href="#1">RECEPIES</a></li>
+
+		</ul>
+	</div>
+	<div id="footer"><br><br><br>
+		<center>
+			<p>© 2020 The Coca-Cola Company, all rights reserved.&nbsp&nbsp&nbsp<a href="#3">Privacy</a>|<a
+					href="#3">Terms</a>&nbsp &nbsp&nbsp<h3>Developed By: Awais Ahmad</h3>
+			</p>
+		</center>
+	</div>
+
+
+</body>
+
+</html>
